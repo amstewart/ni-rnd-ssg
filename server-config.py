@@ -1,3 +1,26 @@
+## Specify what command to use to invoke a web browser when opening the notebook.
+#  If not specified, the default browser will be determined by the `webbrowser`
+#  standard library module, which allows setting of the BROWSER environment
+#  variable to override it.
+#c.NotebookApp.browser = u'firefox'
+c.NotebookApp.open_browser = True
+
+## The IP address the notebook server will listen on.
+c.NotebookApp.ip = 'localhost'
+## The port the notebook server will listen on.
+c.NotebookApp.port = 8888
+
+## Hashed password to use for web authentication.
+#  
+#  To generate, type in a python/IPython shell:
+#  
+#    from notebook.auth import passwd; passwd()
+#  
+#  The string should be of the form type:salt:hashed-password.
+
+# 'qweqwe'
+c.NotebookApp.password = u'sha1:44597ca68037:00f3da25f11242d66a335fe6db52d3a3a67b4190'
+
 # Configuration file for jupyter-notebook.
 
 #------------------------------------------------------------------------------
@@ -61,19 +84,12 @@
 ## Whether to allow the user to run the notebook as root.
 #c.NotebookApp.allow_root = False
 
-## DEPRECATED use base_url
-#c.NotebookApp.base_project_url = '/'
 
 ## The base URL for the notebook server.
 #  
 #  Leading and trailing slashes can be omitted, and will automatically be added.
 #c.NotebookApp.base_url = '/'
 
-## Specify what command to use to invoke a web browser when opening the notebook.
-#  If not specified, the default browser will be determined by the `webbrowser`
-#  standard library module, which allows setting of the BROWSER environment
-#  variable to override it.
-c.NotebookApp.browser = u'firefox'
 
 ## The full path to an SSL/TLS certificate file.
 #c.NotebookApp.certfile = u''
@@ -158,9 +174,6 @@ c.NotebookApp.browser = u'firefox'
 #  limited.
 #c.NotebookApp.iopub_msg_rate_limit = 1000
 
-## The IP address the notebook server will listen on.
-c.NotebookApp.ip = '10.2.106.71'
-
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
 
@@ -201,21 +214,6 @@ c.NotebookApp.ip = '10.2.106.71'
 ## The directory to use for notebooks and kernels.
 #c.NotebookApp.notebook_dir = u''
 
-## Whether to open in a browser after starting. The specific browser used is
-#  platform dependent and determined by the python standard library `webbrowser`
-#  module, unless it is overridden using the --browser (NotebookApp.browser)
-#  configuration option.
-c.NotebookApp.open_browser = True
-
-## Hashed password to use for web authentication.
-#  
-#  To generate, type in a python/IPython shell:
-#  
-#    from notebook.auth import passwd; passwd()
-#  
-#  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = u'sha1:44597ca68037:00f3da25f11242d66a335fe6db52d3a3a67b4190'
-
 ## Forces users to use a password for the Notebook server. This is useful in a
 #  multi user environment, for instance when everybody in the LAN can access each
 #  other's machine though ssh.
@@ -224,8 +222,6 @@ c.NotebookApp.password = u'sha1:44597ca68037:00f3da25f11242d66a335fe6db52d3a3a67
 #  any user can connect to the notebook server via ssh.
 #c.NotebookApp.password_required = False
 
-## The port the notebook server will listen on.
-c.NotebookApp.port = 8888
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
