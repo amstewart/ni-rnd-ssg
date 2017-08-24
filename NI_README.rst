@@ -18,9 +18,9 @@ instructions here:
 http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/
 
 2. Once you are in your virtual environment shell, install the requirements from
-``:requirements2.txt``
+``:requirements.txt``
 
-``pip install -r requirements2.txt``
+``pip install -r requirements.txt``
 
 Note that the install might still fail because you lack certain system binaries.
 For example, my install required that I pick up a Fortran compiler which, in my
